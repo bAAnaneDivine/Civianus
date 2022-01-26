@@ -1,0 +1,49 @@
+*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*
+
+   _____ _       _                       
+  / ____(_)     (_)                      
+ | |     ___   ___  __ _ _ __  _   _ ___ 
+ | |    | \ \ / / |/ _` | '_ \| | | / __|
+ | |____| |\ V /| | (_| | | | | |_| \__ \
+  \_____|_| \_/ |_|\__,_|_| |_|\__,_|___/
+
+                                         
+*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*        
+                          
+Bonjour et bienvenue sur Civianus
+
+jeu réalisé par pierre, maël et cyprien
+
+Chapitre :
+
+	1.	Règles basique
+	2.	Nations
+	3.1	Gain de science et culture
+	3.2	Gestion du terrain
+
+1 : Le but fondamental de notre jeu est d'être la nation la plus puissante et/ou dernière restante de la partie.
+Pour cela le joueur créer une ville sur un emplacement adapté et use de la production et de la nourriture de celle ci pour la faire prospérer et en créer d'autres par la suite.
+Dans un second temps le joueur peut lancer la production d'unitées qui vont pouvoir se ballader sur le tableau, et ainsi découvrir les autres civilisations de la partie.
+Pour une conquête de la carte, des unitées militaire vous seront necessaire, certaines propre à chaque nation, elle influgeront des dégats à la ville de votre adversaire une fois en conctact.
+
+2 : Les nations sont au nombre de 3 pour le moment, La Russie, L'Allemagne et L'Italie. Chaque pays possède ses noms de villes ainsi que des unités propre à elle, ainsi qu'une couleur de territoire.
+L'Allemagne possède plus de production selon ses mines construites, a une unitée exclusive "chevalier teutonique" une troupe lourde de l'ère du Moyen-Âge.
+La Russie possède un boost de terrain lors de la création d'une nouvelle ville ainsi qu'un boost passif de science dans son centre ville.
+Rome quant à lui possède un boost passif de culture dans son centre ville ainsi qu'une unitée exclusive "legionnaire" qui possède un boost d'attaque sur les unitées lourdes.
+
+3.1 : Lors de chaque tour dans la partie les Nations gagnent de la science et de la culture par tour (certains plus selon leurs avantages propre). Cette science et culture s'accumulent pour remplir une jauge qui lorsqu'elle est pleine débloque l'ère suiviante ainsi que de nouvelles technologies/doctrines.
+
+3.2 : Quand une nation s'installe sur une terre elle est octroyé un territoire
+
+
+
+
+
+Chaque tour vous générerez de la science, celle ci est défini à deux par tour puis l'aménagement du terrain pour construire des bibliothèques
+
+
+
+
+
+
+
