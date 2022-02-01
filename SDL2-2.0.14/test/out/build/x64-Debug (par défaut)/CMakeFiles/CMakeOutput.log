@@ -1,0 +1,213 @@
+The system is: Windows - 10.0.19041 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/Program Files (x86)/hop3x/bin/gcc.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+
+The C compiler identification is GNU, found in "D:/Users/maelv/Documents/Leçons et Devoirs/SDL/SDL2-2.0.14/test/out/build/x64-Debug (par défaut)/CMakeFiles/3.18.20081302-MSVC_2/CompilerIdC/a.exe"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: D:/Users/maelv/Documents/Leçons et Devoirs/SDL/SDL2-2.0.14/test/out/build/x64-Debug (par défaut)/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_9986d && [1/2] Building C object CMakeFiles/cmTC_9986d.dir/CMakeCCompilerABI.c.obj
+Using built-in specs.
+COLLECT_GCC=C:\PROGRA~2\hop3x\bin\gcc.exe
+Target: x86_64-w64-mingw32
+Configured with: ../../../src/gcc-5.1.0/configure --build=x86_64-w64-mingw32 --enable-targets=all --enable-languages=ada,c,c++,fortran,lto,objc,obj-c++ --enable-libgomp --enable-lto --enable-graphite --enable-cxx-flags=-DWINPTHREAD_STATIC --disable-build-with-cxx --disable-build-poststage1-with-cxx --enable-libstdcxx-debug --enable-threads=posix --enable-version-specific-runtime-libs --enable-fully-dynamic-string --enable-libstdcxx-threads --enable-libstdcxx-time --with-gnu-ld --disable-werror --disable-nls --disable-win32-registry --prefix=/mingw64tdm --with-local-prefix=/mingw64tdm --with-pkgversion=tdm64-1 --with-bugurl=http://tdm-gcc.tdragon.net/bugs
+Thread model: posix
+gcc version 5.1.0 (tdm64-1) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9986d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64'
+ C:/PROGRA~2/hop3x/bin/../libexec/gcc/x86_64-w64-mingw32/5.1.0/cc1.exe -quiet -v -iprefix C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/ -D_REENTRANT C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.18/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_9986d.dir/CMakeCCompilerABI.c.obj -version -o C:\Users\maelv\AppData\Local\Temp\cchRkGJc.s
+GNU C11 (tdm64-1) version 5.1.0 (x86_64-w64-mingw32)
+	compiled by GNU C version 5.1.0, GMP version 4.3.2, MPFR version 2.4.2, MPC version 0.8.2
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "C:/PROGRA~2/hop3x/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/5.1.0/include"
+ignoring duplicate directory "C:/PROGRA~2/hop3x/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"
+ignoring duplicate directory "C:/PROGRA~2/hop3x/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"
+ignoring duplicate directory "C:/PROGRA~2/hop3x/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include
+ C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include
+ C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed
+ C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include
+End of search list.
+GNU C11 (tdm64-1) version 5.1.0 (x86_64-w64-mingw32)
+	compiled by GNU C version 5.1.0, GMP version 4.3.2, MPFR version 2.4.2, MPC version 0.8.2
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 72fdcf42c4c1c584c8e1347f320364c3
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9986d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64'
+ C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_9986d.dir/CMakeCCompilerABI.c.obj C:\Users\maelv\AppData\Local\Temp\cchRkGJc.s
+GNU assembler version 2.25 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.25
+COMPILER_PATH=C:/PROGRA~2/hop3x/bin/../libexec/gcc/x86_64-w64-mingw32/5.1.0/;C:/PROGRA~2/hop3x/bin/../libexec/gcc/;C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/
+LIBRARY_PATH=C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/;C:/PROGRA~2/hop3x/bin/../lib/gcc/;C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../lib/;C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib/;C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9986d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64'
+[2/2] Linking C executable cmTC_9986d.exe
+Using built-in specs.
+COLLECT_GCC=C:\PROGRA~2\hop3x\bin\gcc.exe
+COLLECT_LTO_WRAPPER=C:/PROGRA~2/hop3x/bin/../libexec/gcc/x86_64-w64-mingw32/5.1.0/lto-wrapper.exe
+Target: x86_64-w64-mingw32
+Configured with: ../../../src/gcc-5.1.0/configure --build=x86_64-w64-mingw32 --enable-targets=all --enable-languages=ada,c,c++,fortran,lto,objc,obj-c++ --enable-libgomp --enable-lto --enable-graphite --enable-cxx-flags=-DWINPTHREAD_STATIC --disable-build-with-cxx --disable-build-poststage1-with-cxx --enable-libstdcxx-debug --enable-threads=posix --enable-version-specific-runtime-libs --enable-fully-dynamic-string --enable-libstdcxx-threads --enable-libstdcxx-time --with-gnu-ld --disable-werror --disable-nls --disable-win32-registry --prefix=/mingw64tdm --with-local-prefix=/mingw64tdm --with-pkgversion=tdm64-1 --with-bugurl=http://tdm-gcc.tdragon.net/bugs
+Thread model: posix
+gcc version 5.1.0 (tdm64-1) 
+COMPILER_PATH=C:/PROGRA~2/hop3x/bin/../libexec/gcc/x86_64-w64-mingw32/5.1.0/;C:/PROGRA~2/hop3x/bin/../libexec/gcc/;C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/
+LIBRARY_PATH=C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/;C:/PROGRA~2/hop3x/bin/../lib/gcc/;C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../lib/;C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib/;C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9986d.exe' '-mtune=generic' '-march=x86-64'
+ C:/PROGRA~2/hop3x/bin/../libexec/gcc/x86_64-w64-mingw32/5.1.0/collect2.exe -plugin C:/PROGRA~2/hop3x/bin/../libexec/gcc/x86_64-w64-mingw32/5.1.0/liblto_plugin-0.dll -plugin-opt=C:/PROGRA~2/hop3x/bin/../libexec/gcc/x86_64-w64-mingw32/5.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\maelv\AppData\Local\Temp\ccG7BrPk.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -m i386pep --exclude-libs=libpthread.a -Bdynamic -o cmTC_9986d.exe C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/crtbegin.o -LC:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0 -LC:/PROGRA~2/hop3x/bin/../lib/gcc -LC:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../lib -LC:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib -LC:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../.. CMakeFiles/cmTC_9986d.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_9986d.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/crtend.o
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include]
+    add: [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include]
+    add: [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed]
+    add: [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include]
+  end of search list found
+  collapse include dir [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include] ==> [C:/Program Files (x86)/hop3x/lib/gcc/x86_64-w64-mingw32/5.1.0/include]
+  collapse include dir [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include] ==> [C:/Program Files (x86)/hop3x/include]
+  collapse include dir [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed] ==> [C:/Program Files (x86)/hop3x/lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed]
+  collapse include dir [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include] ==> [C:/Program Files (x86)/hop3x/x86_64-w64-mingw32/include]
+  implicit include dirs: [C:/Program Files (x86)/hop3x/lib/gcc/x86_64-w64-mingw32/5.1.0/include;C:/Program Files (x86)/hop3x/include;C:/Program Files (x86)/hop3x/lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed;C:/Program Files (x86)/hop3x/x86_64-w64-mingw32/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: D:/Users/maelv/Documents/Leçons et Devoirs/SDL/SDL2-2.0.14/test/out/build/x64-Debug (par défaut)/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_9986d && [1/2] Building C object CMakeFiles/cmTC_9986d.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=C:\PROGRA~2\hop3x\bin\gcc.exe]
+  ignore line: [Target: x86_64-w64-mingw32]
+  ignore line: [Configured with: ../../../src/gcc-5.1.0/configure --build=x86_64-w64-mingw32 --enable-targets=all --enable-languages=ada,c,c++,fortran,lto,objc,obj-c++ --enable-libgomp --enable-lto --enable-graphite --enable-cxx-flags=-DWINPTHREAD_STATIC --disable-build-with-cxx --disable-build-poststage1-with-cxx --enable-libstdcxx-debug --enable-threads=posix --enable-version-specific-runtime-libs --enable-fully-dynamic-string --enable-libstdcxx-threads --enable-libstdcxx-time --with-gnu-ld --disable-werror --disable-nls --disable-win32-registry --prefix=/mingw64tdm --with-local-prefix=/mingw64tdm --with-pkgversion=tdm64-1 --with-bugurl=http://tdm-gcc.tdragon.net/bugs]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.1.0 (tdm64-1) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9986d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ C:/PROGRA~2/hop3x/bin/../libexec/gcc/x86_64-w64-mingw32/5.1.0/cc1.exe -quiet -v -iprefix C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/ -D_REENTRANT C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.18/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_9986d.dir/CMakeCCompilerABI.c.obj -version -o C:\Users\maelv\AppData\Local\Temp\cchRkGJc.s]
+  ignore line: [GNU C11 (tdm64-1) version 5.1.0 (x86_64-w64-mingw32)]
+  ignore line: [	compiled by GNU C version 5.1.0  GMP version 4.3.2  MPFR version 2.4.2  MPC version 0.8.2]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring duplicate directory "C:/PROGRA~2/hop3x/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/5.1.0/include"]
+  ignore line: [ignoring duplicate directory "C:/PROGRA~2/hop3x/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"]
+  ignore line: [ignoring duplicate directory "C:/PROGRA~2/hop3x/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"]
+  ignore line: [ignoring duplicate directory "C:/PROGRA~2/hop3x/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include]
+  ignore line: [ C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include]
+  ignore line: [ C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed]
+  ignore line: [ C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C11 (tdm64-1) version 5.1.0 (x86_64-w64-mingw32)]
+  ignore line: [	compiled by GNU C version 5.1.0  GMP version 4.3.2  MPFR version 2.4.2  MPC version 0.8.2]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 72fdcf42c4c1c584c8e1347f320364c3]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9986d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_9986d.dir/CMakeCCompilerABI.c.obj C:\Users\maelv\AppData\Local\Temp\cchRkGJc.s]
+  ignore line: [GNU assembler version 2.25 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.25]
+  ignore line: [COMPILER_PATH=C:/PROGRA~2/hop3x/bin/../libexec/gcc/x86_64-w64-mingw32/5.1.0/]
+  ignore line: [C:/PROGRA~2/hop3x/bin/../libexec/gcc/]
+  ignore line: [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/]
+  ignore line: [LIBRARY_PATH=C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/]
+  ignore line: [C:/PROGRA~2/hop3x/bin/../lib/gcc/]
+  ignore line: [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+  ignore line: [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../lib/]
+  ignore line: [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib/]
+  ignore line: [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9986d.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [[2/2] Linking C executable cmTC_9986d.exe]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=C:\PROGRA~2\hop3x\bin\gcc.exe]
+  ignore line: [COLLECT_LTO_WRAPPER=C:/PROGRA~2/hop3x/bin/../libexec/gcc/x86_64-w64-mingw32/5.1.0/lto-wrapper.exe]
+  ignore line: [Target: x86_64-w64-mingw32]
+  ignore line: [Configured with: ../../../src/gcc-5.1.0/configure --build=x86_64-w64-mingw32 --enable-targets=all --enable-languages=ada,c,c++,fortran,lto,objc,obj-c++ --enable-libgomp --enable-lto --enable-graphite --enable-cxx-flags=-DWINPTHREAD_STATIC --disable-build-with-cxx --disable-build-poststage1-with-cxx --enable-libstdcxx-debug --enable-threads=posix --enable-version-specific-runtime-libs --enable-fully-dynamic-string --enable-libstdcxx-threads --enable-libstdcxx-time --with-gnu-ld --disable-werror --disable-nls --disable-win32-registry --prefix=/mingw64tdm --with-local-prefix=/mingw64tdm --with-pkgversion=tdm64-1 --with-bugurl=http://tdm-gcc.tdragon.net/bugs]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.1.0 (tdm64-1) ]
+  ignore line: [COMPILER_PATH=C:/PROGRA~2/hop3x/bin/../libexec/gcc/x86_64-w64-mingw32/5.1.0/]
+  ignore line: [C:/PROGRA~2/hop3x/bin/../libexec/gcc/]
+  ignore line: [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/]
+  ignore line: [LIBRARY_PATH=C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/]
+  ignore line: [C:/PROGRA~2/hop3x/bin/../lib/gcc/]
+  ignore line: [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+  ignore line: [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../lib/]
+  ignore line: [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib/]
+  ignore line: [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9986d.exe' '-mtune=generic' '-march=x86-64']
+  link line: [ C:/PROGRA~2/hop3x/bin/../libexec/gcc/x86_64-w64-mingw32/5.1.0/collect2.exe -plugin C:/PROGRA~2/hop3x/bin/../libexec/gcc/x86_64-w64-mingw32/5.1.0/liblto_plugin-0.dll -plugin-opt=C:/PROGRA~2/hop3x/bin/../libexec/gcc/x86_64-w64-mingw32/5.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\maelv\AppData\Local\Temp\ccG7BrPk.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -m i386pep --exclude-libs=libpthread.a -Bdynamic -o cmTC_9986d.exe C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/crtbegin.o -LC:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0 -LC:/PROGRA~2/hop3x/bin/../lib/gcc -LC:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../lib -LC:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib -LC:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../.. CMakeFiles/cmTC_9986d.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_9986d.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/crtend.o]
+    arg [C:/PROGRA~2/hop3x/bin/../libexec/gcc/x86_64-w64-mingw32/5.1.0/collect2.exe] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [C:/PROGRA~2/hop3x/bin/../libexec/gcc/x86_64-w64-mingw32/5.1.0/liblto_plugin-0.dll] ==> ignore
+    arg [-plugin-opt=C:/PROGRA~2/hop3x/bin/../libexec/gcc/x86_64-w64-mingw32/5.1.0/lto-wrapper.exe] ==> ignore
+    arg [-plugin-opt=-fresolution=C:\Users\maelv\AppData\Local\Temp\ccG7BrPk.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+    arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
+    arg [-plugin-opt=-pass-through=-ladvapi32] ==> ignore
+    arg [-plugin-opt=-pass-through=-lshell32] ==> ignore
+    arg [-plugin-opt=-pass-through=-luser32] ==> ignore
+    arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+    arg [-m] ==> ignore
+    arg [i386pep] ==> ignore
+    arg [--exclude-libs=libpthread.a] ==> ignore
+    arg [-Bdynamic] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_9986d.exe] ==> ignore
+    arg [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> ignore
+    arg [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/crtbegin.o] ==> ignore
+    arg [-LC:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0] ==> dir [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0]
+    arg [-LC:/PROGRA~2/hop3x/bin/../lib/gcc] ==> dir [C:/PROGRA~2/hop3x/bin/../lib/gcc]
+    arg [-LC:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib/../lib]
+    arg [-LC:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../lib] ==> dir [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../lib]
+    arg [-LC:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib]
+    arg [-LC:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../..] ==> dir [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../..]
+    arg [CMakeFiles/cmTC_9986d.dir/CMakeCCompilerABI.c.obj] ==> ignore
+    arg [--out-implib] ==> ignore
+    arg [libcmTC_9986d.dll.a] ==> ignore
+    arg [--major-image-version] ==> ignore
+    arg [0] ==> ignore
+    arg [--minor-image-version] ==> ignore
+    arg [0] ==> ignore
+    arg [-lmingw32] ==> lib [mingw32]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lmoldname] ==> lib [moldname]
+    arg [-lmingwex] ==> lib [mingwex]
+    arg [-lmsvcrt] ==> lib [msvcrt]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-ladvapi32] ==> lib [advapi32]
+    arg [-lshell32] ==> lib [shell32]
+    arg [-luser32] ==> lib [user32]
+    arg [-lkernel32] ==> lib [kernel32]
+    arg [-lmingw32] ==> lib [mingw32]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lmoldname] ==> lib [moldname]
+    arg [-lmingwex] ==> lib [mingwex]
+    arg [-lmsvcrt] ==> lib [msvcrt]
+    arg [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/crtend.o] ==> ignore
+  remove lib [msvcrt]
+  remove lib [msvcrt]
+  collapse library dir [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0] ==> [C:/Program Files (x86)/hop3x/lib/gcc/x86_64-w64-mingw32/5.1.0]
+  collapse library dir [C:/PROGRA~2/hop3x/bin/../lib/gcc] ==> [C:/Program Files (x86)/hop3x/lib/gcc]
+  collapse library dir [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [C:/Program Files (x86)/hop3x/x86_64-w64-mingw32/lib]
+  collapse library dir [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../lib] ==> [C:/Program Files (x86)/hop3x/lib]
+  collapse library dir [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/lib] ==> [C:/Program Files (x86)/hop3x/x86_64-w64-mingw32/lib]
+  collapse library dir [C:/PROGRA~2/hop3x/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../..] ==> [C:/Program Files (x86)/hop3x/lib]
+  implicit libs: [mingw32;gcc;moldname;mingwex;pthread;advapi32;shell32;user32;kernel32;mingw32;gcc;moldname;mingwex]
+  implicit dirs: [C:/Program Files (x86)/hop3x/lib/gcc/x86_64-w64-mingw32/5.1.0;C:/Program Files (x86)/hop3x/lib/gcc;C:/Program Files (x86)/hop3x/x86_64-w64-mingw32/lib;C:/Program Files (x86)/hop3x/lib]
+  implicit fwks: []
+
+
