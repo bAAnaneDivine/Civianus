@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\bin",
+    "\\hd",
+    "\\image",
     "\\src"
   ],
-  "SelectedNode": "\\src\\menu.h",
+  "SelectedNode": "\\src\\admin_SDL.h",
   "PreviewInSolutionExplorer": false
 }

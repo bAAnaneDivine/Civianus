@@ -6,14 +6,14 @@
 
 #include "admin_SDL.h"
 #include "fenetre.h"
-#include "menu.h"
+
 
 /**
  *\file fenetre.c 
  * \brief Création de la fenêtre de jeu
- * \author Pierre Maël Geoffrey
+ * \author Pierre Maël Cyprien
  * \version 1.0
- * \date 19/04/2021
+ * \date 01/02/2022
 */
 
 

@@ -13,7 +13,7 @@
  * \brief Programme principal
  * \author Pierre Maël Cyprien
  * \version 1.0
- * \date 19/04/2021
+ * \date 01/02/2022
 */
 
 /// Main principal :
@@ -25,34 +25,45 @@
 
 //gcc src/main.c -o bin/main -I include -L lib -lmingw32 -lSDL2main -lSDL2 -mwindows
 
+
+
 int main(int argc, char* argv[])
 {
-    
-    int const height = 800;
-    int const width = 450;
-
-
     SDL_Window* window = NULL;
     SDL_Renderer* renderer = NULL;
 
-    SDL_Rect rectangle_pers;
-    rectangle_pers.x = 1;
-    rectangle_pers.y = 1;
+    int height = 800; 
+    int width = 450;
+
+    SDL_Rect fenetre_surface;
+    fenetre_surface.x = 0;
+    fenetre_surface.y = 0;
+    fenetre_surface.w = height;
+    fenetre_surface.h = width;
 
     SDL_Rect rectangle_restart;
     rectangle_restart.x = (height / 2 / 1.5);
     rectangle_restart.y = (width / 3 * 2);
     rectangle_restart.w = 100;
     rectangle_restart.h = 50;
-
+   
     SDL_Rect rectangle_quit;
     rectangle_quit.x = (height / 2 * 1);
     rectangle_quit.y = (width / 3 * 2);
     rectangle_quit.w = 100;
     rectangle_quit.h = 50;
 
+    SDL_Rect rect_trajan;
+    rect_trajan.x = 100;
+    rect_trajan.y = 50;
+    rect_trajan.w = 30;
+    rect_trajan.h = 30;
+
+  
+
     int x = 0, y = 0;
 
+ 
 
     //Lancement SDL
     SDL_initialisation();
@@ -71,8 +82,8 @@ int main(int argc, char* argv[])
         SDL_DestroyWindow(window);
         SDL_ExitWithError("Impossible de creer le rendu");
     }
-
-    menu(window, renderer, rectangle_restart, rectangle_quit);
+   // menu_select(window, renderer, rect_trajan);
+    menu(window, renderer, rectangle_restart, rectangle_quit, fenetre_surface);
     SDL_RenderPresent(renderer);
 
     SDL_bool program_launched = SDL_TRUE;
@@ -89,26 +100,22 @@ int main(int argc, char* argv[])
                 break;
 
             case SDL_MOUSEBUTTONDOWN: // Relâchement d'un clique
-                x = event.button.x;  //récupération de la position de la souris
-                y = event.button.y;
-                while ((x > rectangle_restart.x && x<(rectangle_restart.x + rectangle_restart.w) && y>rectangle_restart.y && y < (rectangle_restart.y + rectangle_restart.h)) && program_launched)
+                 x = event.button.x;  //récupération de la position de la souris
+                 y = event.button.y;
+                if ((x > rectangle_restart.x && x<(rectangle_restart.x + rectangle_restart.w) && y>rectangle_restart.y && y < (rectangle_restart.y + rectangle_restart.h)) && program_launched)
                 {
-                    /*SDL_DestroyRenderer(renderer);
-                    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-                    fenetre(window, renderer);
-                    SDL_RenderPresent(renderer);*/
-                    menu_select(window, renderer, x, y);
+                    SDL_RenderClear(renderer);
+                   // menu_select(window, renderer, rect_trajan);
                     SDL_RenderPresent(renderer);
 
 
 
-                    while (SDL_PollEvent(&event))
+                   /* while (SDL_PollEvent(&event))
                     {
                         switch (event.type)
                         {
                         case SDL_KEYDOWN:
-                            fenetre(window, renderer);
-                            SDL_RenderPresent(renderer);
+                          
                             break;
 
                         case SDL_QUIT:
@@ -118,9 +125,9 @@ int main(int argc, char* argv[])
                         default:
                             break;
                         }
-                    }
+                    }*/
                 }
-                if (x > rectangle_quit.x && x<(rectangle_quit.x + rectangle_quit.w) && y>rectangle_quit.y && y < (rectangle_quit.y + rectangle_quit.h))
+                else if (x > rectangle_quit.x && x<(rectangle_quit.x + rectangle_quit.w) && y>rectangle_quit.y && y < (rectangle_quit.y + rectangle_quit.h))
                 {
                     program_launched = SDL_FALSE;
                 }
