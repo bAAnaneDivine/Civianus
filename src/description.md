@@ -1,0 +1,2 @@
+\mainpage Menu principal : Veuillez naviguer dans nos dossier grace au bouton "fichier" ci dessus.
+\brief Morty le petit robot se retrouve dans une ville plongée dans le noir, c'est à VOUS joueur invétéré de devoir rallumer le lumière et Robot City !
