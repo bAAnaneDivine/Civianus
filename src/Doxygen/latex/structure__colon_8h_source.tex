@@ -1,0 +1,70 @@
+\hypertarget{structure__colon_8h_source}{}\doxysection{structure\+\_\+colon.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_COLON\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_COLON\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keywordtype}{int} i,j;}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{comment}{/* srtucture batisseur */}}
+\DoxyCodeLine{8 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structbatisseur}{batisseur}}\{}
+\DoxyCodeLine{9   \textcolor{keywordtype}{int} x;}
+\DoxyCodeLine{10   \textcolor{keywordtype}{int} y;}
+\DoxyCodeLine{11   \textcolor{keywordtype}{int} nb\_coup;}
+\DoxyCodeLine{12   \textcolor{keywordtype}{int} pt\_mouv;}
+\DoxyCodeLine{13 \}\mbox{\hyperlink{structbatisseur}{bbatisseur\_t}};}
+\DoxyCodeLine{14 \textcolor{comment}{/* structure colon */}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structcolon__t}{colon\_t}}\{}
+\DoxyCodeLine{17   \textcolor{keywordtype}{int} x;}
+\DoxyCodeLine{18   \textcolor{keywordtype}{int} y;}
+\DoxyCodeLine{19   \textcolor{keywordtype}{int} etat\_cons;}
+\DoxyCodeLine{20 \}\mbox{\hyperlink{structcolon__t}{colon\_t}};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{comment}{/* srtucture ville avec avantage */}}
+\DoxyCodeLine{23 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structville}{ville}}\{}
+\DoxyCodeLine{24   \textcolor{keywordtype}{int} x;}
+\DoxyCodeLine{25   \textcolor{keywordtype}{int} y;}
+\DoxyCodeLine{26   \textcolor{keywordtype}{int} culture;}
+\DoxyCodeLine{27   \textcolor{keywordtype}{int} sciences;}
+\DoxyCodeLine{28   \textcolor{keywordtype}{int} niveau\_ville;}
+\DoxyCodeLine{29   \textcolor{keywordtype}{char}*  nom\_ville;}
+\DoxyCodeLine{30 \}\mbox{\hyperlink{structville}{ville\_t}};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{comment}{/* structure guerrier classique */}}
+\DoxyCodeLine{33 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structguerrier}{guerrier}}\{}
+\DoxyCodeLine{34   \textcolor{keywordtype}{int} x;}
+\DoxyCodeLine{35   \textcolor{keywordtype}{int} y;}
+\DoxyCodeLine{36   \textcolor{keywordtype}{int} pdv;}
+\DoxyCodeLine{37   \textcolor{keywordtype}{int} att;}
+\DoxyCodeLine{38   \textcolor{keywordtype}{int} def;}
+\DoxyCodeLine{39 \}\mbox{\hyperlink{structguerrier}{guerrier\_t}};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{comment}{/* structure armée longue distance*/}}
+\DoxyCodeLine{42 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structarm__long}{arm\_long}}\{}
+\DoxyCodeLine{43   \textcolor{keywordtype}{int} x;}
+\DoxyCodeLine{44   \textcolor{keywordtype}{int} y;}
+\DoxyCodeLine{45   \textcolor{keywordtype}{int} pdv;}
+\DoxyCodeLine{46   \textcolor{keywordtype}{int} att;}
+\DoxyCodeLine{47   \textcolor{keywordtype}{int} def;}
+\DoxyCodeLine{48 \}\mbox{\hyperlink{structarm__long}{arm\_long\_t}};}
+\DoxyCodeLine{49 \textcolor{comment}{/* structure armée specifique */}}
+\DoxyCodeLine{50 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structarm__spec}{arm\_spec}}\{}
+\DoxyCodeLine{51   \textcolor{keywordtype}{int} x;}
+\DoxyCodeLine{52   \textcolor{keywordtype}{int} y;}
+\DoxyCodeLine{53   \textcolor{keywordtype}{int} pdv;}
+\DoxyCodeLine{54   \textcolor{keywordtype}{int} att;}
+\DoxyCodeLine{55   \textcolor{keywordtype}{int} def;}
+\DoxyCodeLine{56 \}\mbox{\hyperlink{structarm__spec}{arm\_spec\_t}};}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{keywordtype}{int} est\_libre(\textcolor{keywordtype}{int} biome[i][j]);}
+\DoxyCodeLine{59 \textcolor{keywordtype}{void} supp\_image\_colon(SDL\_Rect plateau[i][j],SDL\_Renderer *renderer,SDL\_Texture * texture);}
+\DoxyCodeLine{60 \mbox{\hyperlink{structcolon__t}{colon\_t}} * crea\_colon(SDL\_Rect plateau[N][N],\textcolor{keywordtype}{int} i,\textcolor{keywordtype}{int} j);}
+\DoxyCodeLine{61 \textcolor{keywordtype}{void} mvt\_colon(SDL\_Rect plateau[i][j],\mbox{\hyperlink{structcolon__t}{colon\_t}} * colon,\textcolor{keywordtype}{int} x,\textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{keywordtype}{int} click\_case\_x(\textcolor{keywordtype}{int} x);}
+\DoxyCodeLine{64 \textcolor{keywordtype}{int} click\_case\_y(\textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
