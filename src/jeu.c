@@ -25,6 +25,8 @@ int  jeu(int civilization,SDL_Window* window, SDL_Renderer* renderer,int liste_c
 
 
      SDL_Rect passer_tour={LONGUEUR_CASE,0,LONGUEUR_CASE,LARGEUR_CASE};
+     SDL_Suraface *image=IMG_Load("./image/bouton_passer_tour.png");
+     SDL_AfficherUneImage(renderer,image,texture,passer_tour);
       SDL_Rect rectangle_quit={0,0,LONGUEUR_CASE,LARGEUR_CASE};
       crea_plat(cases);
         SDL_bool program_launched = SDL_TRUE;
@@ -33,23 +35,15 @@ int  jeu(int civilization,SDL_Window* window, SDL_Renderer* renderer,int liste_c
 
 
          ville_t* ville=crea_ville(4,4);
-         ville_t* ville2=crea_ville(4,15);
-         ville_t* ville3=crea_ville(7,16);
-         ville_t* ville5=crea_ville(17,6);
+         ville_t* ville2=NULL;
+         ville_t* ville3=NULL;
+         ville_t* ville5=NULL;
          batisseur_t *batisseur=NULL;
-         colon_t *colon=crea_colon(12,5);
-         guerrier_t *guerrier=crea_guerrier(8,10);
-         guerrier_t *guerrier1=crea_guerrier(8,15);
-         arm_long_t *archer=crea_arm_long(3,4);
+         colon_t *colon=NULL;
+         guerrier_t *guerrier=NULL;
+         guerrier_t *guerrier1=NULL;
+         arm_long_t *archer=NULL;
          affiche_ville(cases,ville,renderer);
-         affiche_ville(cases,ville2,renderer);
-         affiche_ville(cases,ville3,renderer);
-         affiche_ville(cases,ville5,renderer);
-         affiche_colon(cases,renderer,colon);
-         affiche_guerrier(cases,renderer,guerrier);
-         affiche_guerrier(cases,renderer,guerrier1);
-         affiche_arm_long(cases,renderer,archer);
-
           int tour=1;
           int choix = 0 ;
           int reset=0;
@@ -91,6 +85,7 @@ int  jeu(int civilization,SDL_Window* window, SDL_Renderer* renderer,int liste_c
                                             else if (choix == 3)
                                             {
                                               guerrier_t *guerrier=crea_guerrier(1,5);
+                                              liste_cases[1][5]=40;
                                               affiche_guerrier(cases,renderer,guerrier);
                                               reset = 1;
                                             }
@@ -105,6 +100,7 @@ int  jeu(int civilization,SDL_Window* window, SDL_Renderer* renderer,int liste_c
                                             colon=NULL;
                                             reset = 1;
                                           }
+                                        liste_cases[colon->x][colon->y]=50;
                                     }
                                 }
 
@@ -118,6 +114,7 @@ int  jeu(int civilization,SDL_Window* window, SDL_Renderer* renderer,int liste_c
                                           //  fonction_afficher_ferme(/*peut etre changer le plateau pour un réaffichage après*/);
                                             batisseur->nb_coup=batisseur->nb_coup-1;
                                             civ->nb_ferme=(civ->nb_ferme)+1;
+                                            liste_cases[batisseur->x][batisseur->y]=65;
                                             if(batisseur->nb_coup == 0)
                                                 batisseur=NULL;
                                           }
@@ -125,6 +122,7 @@ int  jeu(int civilization,SDL_Window* window, SDL_Renderer* renderer,int liste_c
                                           {
                                             batisseur->nb_coup=batisseur->nb_coup-1;
                                               civ->nb_biblio=(civ->nb_biblio)+1;
+                                              liste_cases[batisseur->x][batisseur->y]=70;
                                             if(batisseur->nb_coup == 0)
                                                 batisseur=NULL;
                                           }
@@ -134,8 +132,9 @@ int  jeu(int civilization,SDL_Window* window, SDL_Renderer* renderer,int liste_c
 
                                 if((x > passer_tour.x && x<( passer_tour.x + passer_tour.w) && y> passer_tour.y && y < ( passer_tour.y +  passer_tour.h))){
                                     printf("tour n° :%d\n\n",tour);
-                                        civ=fin_tour_civ(civ);
-                                        printf("nb_ferme",civ->nb_ferme);
+                                        //civ=fin_tour_civ(civ);
+                                        affectation_cases(liste_cases,cases);
+                                        printf("affectation faite",civ->nb_ferme);
                                         tour++;
 
                                     break; /*clic pour passer au tour suivant pas le choix*/

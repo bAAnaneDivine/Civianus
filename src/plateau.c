@@ -153,10 +153,7 @@ int affectation_cases(int biome[N][N],SDL_Rect cases[LONGUEUR_CASE][LARGEUR_CASE
 
     for(i=1;i<=19;i++){
       for(j=0;j<=19;j++){
-          cases[i][j].w=LONGUEUR_CASE;
-          cases[i][j].h=LARGEUR_CASE;
-          cases[i][j].x=cases[i-1][j].x+LONGUEUR_CASE;
-          cases[i][j].y=cases[i-1][j].y;
+
           fonction_rand_biome (biome,i,j);
           fprintf( map, "%i ",biome[i][j]);
       }
@@ -230,25 +227,68 @@ int adresse=0;
           image= IMG_Load("./image/montagne.png");
           SDL_AfficherUneImage(renderer,image,texture,cases[i][j]);
         break;
+
         case 2:
         image= IMG_Load("./image/eau.png");
           SDL_AfficherUneImage(renderer,image,texture,cases[i][j]);
         break;
+
+
+        case 30:
+        image= IMG_Load("./image/colon.png");
+          SDL_AfficherUneImage(renderer,image,texture,cases[i][j]);
+        break;
+
+        case 35:
+        image= IMG_Load("./image/batisseur.png");
+          SDL_AfficherUneImage(renderer,image,texture,cases[i][j]);
+        break;
+
+        case 40:
+        image= IMG_Load("./image/guerrier.png");
+          SDL_AfficherUneImage(renderer,image,texture,cases[i][j]);
+        break;
+
+        case 45:
+        image= IMG_Load("./image/archer.png");
+          SDL_AfficherUneImage(renderer,image,texture,cases[i][j]);
+        break;
+
+        case 50:
+        image= IMG_Load("./image/ville1.png");
+          SDL_AfficherUneImage(renderer,image,texture,cases[i][j]);
+        break;
+
+        case 55:
+        image= IMG_Load("./image/ville2.png");
+          SDL_AfficherUneImage(renderer,image,texture,cases[i][j]);
+        break;
+
+        case 60:
+        image= IMG_Load("./image/ville3.png");
+          SDL_AfficherUneImage(renderer,image,texture,cases[i][j]);
+        break;
+
+        case 65:
+        image= IMG_Load("./image/ferme.png");
+          SDL_AfficherUneImage(renderer,image,texture,cases[i][j]);
+        break;
+
+        case 70:
+        image= IMG_Load("./image/biblio.png");
+          SDL_AfficherUneImage(renderer,image,texture,cases[i][j]);
+        break;
+
         default:
           image= IMG_Load("./image/herbe.png");
           SDL_AfficherUneImage(renderer,image,texture,cases[i][j]);
         break;
       }
-      
+
 
       adresse++;
     }
   }
-
-  image= IMG_Load("./image/ville1.png"); /* base alliée */
-  SDL_AfficherUneImage(renderer,image,texture,cases[3][7]);
-  image= IMG_Load("./image/ville1.png"); /* base alliée */
-  SDL_AfficherUneImage(renderer,image,texture,cases[17][8]);
 
 
   clean_ressources(NULL,NULL,texture);

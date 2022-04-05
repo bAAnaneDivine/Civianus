@@ -1,3 +1,4 @@
+Civianus
 Bienvenue sur notre Git !
 
 Dans le cadre de notre projet du second semestre en 2ème année de licence informatique à l'université du Mans, nous avons pour but de créer un jeu vidéo en C et à l'aide de la librairie SDL. Vous-y trouverez nos traces de nos codes dans nos branches respectives.

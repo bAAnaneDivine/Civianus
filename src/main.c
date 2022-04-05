@@ -89,7 +89,7 @@ int main(int argc, char* argv[])
 
     int x = 0, y = 0;
 
-    int civilisation=0;
+    int civilization=0;
 
     /*Lancement SDL*/
     SDL_initialisation();
@@ -188,7 +188,7 @@ int main(int argc, char* argv[])
                     SDL_Rect fenetre_surface = { 0,0,height , width };
                     SDL_RenderCopy(renderer, fond_Texture, NULL, &fenetre_surface); /* Copie du sprite grâce au SDL_Renderer*/
                     SDL_RenderPresent(renderer);
-                    int civilization=menu_select(window, renderer, rect_trajan, rect_pierre, rect_Barberousse); /* choix du personnage */
+                    civilization=menu_select(window, renderer, rect_trajan, rect_pierre, rect_Barberousse); /* choix du personnage */
                     SDL_RenderPresent(renderer);
 
                     rectangle_quit.x = 0;
