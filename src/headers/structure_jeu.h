@@ -2,6 +2,17 @@
 #define _COLON_H_
 
 int i,j;
+/*stats de civilization globale*/
+typedef struct civilization_s{
+  int civilization;
+  int sciences_globale;
+  int culture_globale;
+  int nb_ferme;
+  int nb_biblio;
+  int bonus_sciences;
+  int bonus_culture;
+}civilization_t;
+
 
 
 /* srtucture batisseur */
@@ -9,7 +20,6 @@ typedef struct batisseur_t{
   int x;
   int y;
   int nb_coup;
-  int pt_mouv;
 }batisseur_t;
 /* structure colon */
 
@@ -54,6 +64,18 @@ typedef struct arm_spec{
   int att;
   int def;
 }arm_spec_t;
+
+/*
+ *fonction pour la civilization globale
+ *
+ */
+
+
+
+
+
+
+
 
 /*
  *fonction pour le colon

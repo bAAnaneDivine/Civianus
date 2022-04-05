@@ -34,11 +34,11 @@ int main(int argc, char* argv[])
     SDL_Window* window = NULL;
     SDL_Renderer* renderer = NULL;
     SDL_Texture *texture=NULL;
-    SDL_Surface *image_restart=IMG_Load("image/restart.bmp");
+    SDL_Surface *image_restart=IMG_Load("image/restart.png");
     Uint32 affich_fenetre=0;
 
     int liste_cases[N][N];
-    SDL_Rect cases[N][N];
+    SDL_Rect cases[LONGUEUR_CASE][LARGEUR_CASE];
 
     int height = 1000;
     int width = 700;
@@ -119,7 +119,7 @@ int main(int argc, char* argv[])
                           /*       Création du rendu de plateau     */
                       afficher_plateau(window,renderer,cases,liste_cases);
                       SDL_RenderPresent(renderer);
-                      program_launched=jeu(1,window, renderer);
+                      program_launched=jeu(1,window, renderer,liste_cases);
 
                     }
                 break;

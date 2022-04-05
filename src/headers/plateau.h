@@ -1,7 +1,7 @@
 #ifndef _PLATEAU_H_
-#define _PLATEAU_H_
+#define _MENU_PLATEAU_H__H_
 
-#define N 54
+#define N 35
 
 #define Fenetre_width 700
 #define Fenetre_height 1000

@@ -38,8 +38,6 @@ void menu(SDL_Window* window, SDL_Renderer* renderer, SDL_Rect rectangle_restart
 
     SDL_Texture* bouton_quit_texture = NULL;
     SDL_Surface* bouton_quit = NULL;
-    int height = 800;
-    int width = 450;
 
     SDL_RenderFillRect(renderer, &fenetre_surface);
 
@@ -48,7 +46,7 @@ void menu(SDL_Window* window, SDL_Renderer* renderer, SDL_Rect rectangle_restart
 
     SDL_FreeSurface(fond);
 
-    SDL_RenderCopy(renderer, fond_Texture, NULL, &fenetre_surface); // Copie du sprite grâce au SDL_Renderer
+    SDL_RenderCopy(renderer, fond_Texture, NULL, &fenetre_surface); /* Copie du sprite grâce au SDL_Renderer*/
 
     SDL_DestroyTexture(fond_Texture);
     SDL_RenderFillRect(renderer, &rectangle_restart);
@@ -56,7 +54,7 @@ void menu(SDL_Window* window, SDL_Renderer* renderer, SDL_Rect rectangle_restart
     SDL_RenderFillRect(renderer, &rectangle_continuer);
 
 
-    bouton_restart = SDL_LoadBMP("./image/restart.bmp"); //chargement de l'image du bouton restart
+    bouton_restart = IMG_Load("./image/restart.png"); /*chargement de l'image du bouton restart*/
 
     if (bouton_restart == NULL) {
         SDL_DestroyRenderer(renderer);
@@ -86,7 +84,7 @@ void menu(SDL_Window* window, SDL_Renderer* renderer, SDL_Rect rectangle_restart
 
 
 
-    bouton_continuer = SDL_LoadBMP("./image/continuer.bmp"); //chargement de l'image du bouton continuer
+    bouton_continuer = IMG_Load("./image/continuer.png"); /*chargement de l'image du bouton continuer*/
 
     if (bouton_continuer == NULL) {
         SDL_DestroyRenderer(renderer);
@@ -119,7 +117,7 @@ void menu(SDL_Window* window, SDL_Renderer* renderer, SDL_Rect rectangle_restart
 
 
 
-    bouton_quit = SDL_LoadBMP("./image/quit.bmp");       //chargement de l'image du bouton quitter
+    bouton_quit = IMG_Load("./image/quit.png");       /*chargement de l'image du bouton quitter*/
 
     if (bouton_quit == NULL) {
         SDL_DestroyRenderer(renderer);
@@ -159,42 +157,88 @@ void menu(SDL_Window* window, SDL_Renderer* renderer, SDL_Rect rectangle_restart
 
 
 
-void menu_select(SDL_Window* window, SDL_Renderer* renderer, SDL_Rect rect_trajan,SDL_Rect rect_pierre, SDL_Rect rect_Barberousse)
-{ // faire la liste des civilisations disponibles + leur descrition et retourner la coordonnée du click souris pour sélectionner la civ
+int menu_select(SDL_Window* window, SDL_Renderer* renderer, SDL_Rect rect_trajan,SDL_Rect rect_pierre, SDL_Rect rect_Barberousse)
+{ /* faire la liste des civilisations disponibles + leur descrition et retourner la coordonnée du click souris pour sélectionner la civ*/
+SDL_Event event;
 
-    SDL_Surface* trajan_image = NULL;
-    SDL_Texture* trajan_texture = NULL;
-    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
-    SDL_RenderFillRect(renderer, &rect_trajan);
-    trajan_image = IMG_Load("./image/trajan.png");
-    trajan_texture = SDL_CreateTextureFromSurface(renderer, trajan_image);
-    //SDL_FreeSurface(trajan_image);
-    SDL_RenderCopy(renderer, trajan_texture, NULL, &rect_trajan);
-    SDL_RenderPresent(renderer);
+int x = 0, y = 0;
+SDL_Rect rectangle_continuer_trajan;
+rectangle_continuer_trajan.x = 137.5;
+rectangle_continuer_trajan.y = 50;
+rectangle_continuer_trajan.w = 150;
+rectangle_continuer_trajan.h = 150;
 
-   // rect_trajan =Creation_Text(renderer,rect_trajan,"image/police/Takenoko.TTF",Width/48,TTF_STYLE_BOLD,"Quitter",blue,(Width/4)+(Height*2/18),(Height*5/8)+(Height*2/18));
+SDL_Rect rectangle_continuer_pierre;
+rectangle_continuer_pierre.x = 425;
+rectangle_continuer_pierre.y = 50;
+rectangle_continuer_pierre.w = 150;
+rectangle_continuer_pierre.h = 150;
 
-    SDL_Surface* pierre_image = NULL;
-    SDL_Texture* pierre_texture = NULL;
-    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
-    SDL_RenderFillRect(renderer, &rect_pierre);
-    pierre_image = IMG_Load("./image/pierre.png");
-    pierre_texture = SDL_CreateTextureFromSurface(renderer, pierre_image);
-    //SDL_FreeSurface(trajan_image);
-    SDL_RenderCopy(renderer, pierre_texture, NULL, &rect_pierre);
-    SDL_RenderPresent(renderer);
+SDL_Rect rectangle_continuer_barberousse;
+rectangle_continuer_barberousse.x = 712.5;
+rectangle_continuer_barberousse.y = 50;
+rectangle_continuer_barberousse.w = 150;
+rectangle_continuer_barberousse.h = 150;
 
-    SDL_Surface* Barberousse_image = NULL;
-    SDL_Texture* Barberousse_texture = NULL;
-    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
-    SDL_RenderFillRect(renderer, &rect_Barberousse);
-    Barberousse_image = IMG_Load("./image/allemagne.png");
-    Barberousse_texture = SDL_CreateTextureFromSurface(renderer, Barberousse_image);
-    //SDL_FreeSurface(trajan_image);
-    SDL_RenderCopy(renderer, Barberousse_texture, NULL, &rect_Barberousse);
-    SDL_RenderPresent(renderer);
+SDL_Surface* trajan_image = NULL;
+SDL_Texture* trajan_texture = NULL;
+SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
+SDL_RenderFillRect(renderer, &rect_trajan);
+trajan_image = IMG_Load("./image/trajan.png");
+trajan_texture = SDL_CreateTextureFromSurface(renderer, trajan_image);
+SDL_FreeSurface(trajan_image);
+SDL_RenderCopy(renderer, trajan_texture, NULL, &rect_trajan);
+SDL_RenderPresent(renderer);
 
 
+SDL_Surface* pierre_image = NULL;
+SDL_Texture* pierre_texture = NULL;
+SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
+SDL_RenderFillRect(renderer, &rect_pierre);
+pierre_image = IMG_Load("./image/pierre.png");
+pierre_texture = SDL_CreateTextureFromSurface(renderer, pierre_image);
+SDL_FreeSurface(pierre_image);
+SDL_RenderCopy(renderer, pierre_texture, NULL, &rect_pierre);
+SDL_RenderPresent(renderer);
 
+SDL_Surface* barberousse_image = NULL;
+SDL_Texture* barberousse_texture = NULL;
+SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
+SDL_RenderFillRect(renderer, &rect_Barberousse);
+barberousse_image = IMG_Load("./image/allemagne.png");
+barberousse_texture = SDL_CreateTextureFromSurface(renderer, barberousse_image);
+SDL_FreeSurface(barberousse_image);
+SDL_RenderCopy(renderer, barberousse_texture, NULL, &rect_Barberousse);
+SDL_RenderPresent(renderer);
 
+SDL_bool program_launched = SDL_TRUE;
+int civilisation=0, trouve=0;
+while ((SDL_PollEvent(&event))||(trouve!=1)){
+        switch (event.type){
+            case SDL_QUIT:
+                program_launched = SDL_FALSE;
+                break;
+
+            case SDL_MOUSEBUTTONDOWN:   /* Relâchement d'un clique*/
+                x = event.button.x;  /*récupération de la position de la souris*/
+                y = event.button.y;
+                if (x > rectangle_continuer_trajan.x && x<(rectangle_continuer_trajan.x + rectangle_continuer_trajan.w) && y>rectangle_continuer_trajan.y && y < (rectangle_continuer_trajan.y + rectangle_continuer_trajan.h)){
+                    trouve=1;
+                    return (civilisation=1);
+                }
+                else if (x > rectangle_continuer_pierre.x && x<(rectangle_continuer_pierre.x + rectangle_continuer_pierre.w) && y>rectangle_continuer_pierre.y && y < (rectangle_continuer_pierre.y + rectangle_continuer_pierre.h)){
+                    trouve=1;
+                    return (civilisation=2);
+                }
+                else if (x > rectangle_continuer_barberousse.x && x<(rectangle_continuer_barberousse.x + rectangle_continuer_barberousse.w) && y>rectangle_continuer_barberousse.y && y < (rectangle_continuer_barberousse.y + rectangle_continuer_barberousse.h)){
+                    trouve=1;
+                    return (civilisation=3);
+
+                }
+                break;
+
+            default:
+                break;
+        }
+    }
 }

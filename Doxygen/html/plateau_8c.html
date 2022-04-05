@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Civianus: Référence du fichier src/plateau.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="case_select.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Civianus
+   </div>
+   <div id="projectbrief">Projet de fin d&#39;année de Licence Informatique | 2021 - 2022</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier plateau.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Création du plateau de jeu et affichage de celui ci.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;SDL.h&gt;</code><br />
+<code>#include &lt;SDL_image.h&gt;</code><br />
+<code>#include &quot;headers/admin_SDL.h&quot;</code><br />
+<code>#include &quot;headers/menu.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a0240ac851181b84ac374872dc5434ee4"><td class="memItemLeft" align="right" valign="top"><a id="a0240ac851181b84ac374872dc5434ee4" name="a0240ac851181b84ac374872dc5434ee4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>N</b>&#160;&#160;&#160;54</td></tr>
+<tr class="separator:a0240ac851181b84ac374872dc5434ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7318232461f5d6f94c8b7ffa25a91871"><td class="memItemLeft" align="right" valign="top"><a id="a7318232461f5d6f94c8b7ffa25a91871" name="a7318232461f5d6f94c8b7ffa25a91871"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>Fenetre_width</b>&#160;&#160;&#160;700</td></tr>
+<tr class="separator:a7318232461f5d6f94c8b7ffa25a91871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a801c21eed7334eee9466aa23a8e500b1"><td class="memItemLeft" align="right" valign="top"><a id="a801c21eed7334eee9466aa23a8e500b1" name="a801c21eed7334eee9466aa23a8e500b1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>Fenetre_height</b>&#160;&#160;&#160;1000</td></tr>
+<tr class="separator:a801c21eed7334eee9466aa23a8e500b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49f9d347e36abcc45f7e3d273b7959bb"><td class="memItemLeft" align="right" valign="top"><a id="a49f9d347e36abcc45f7e3d273b7959bb" name="a49f9d347e36abcc45f7e3d273b7959bb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LONGUEUR_CASE</b>&#160;&#160;&#160;1000 / 20</td></tr>
+<tr class="separator:a49f9d347e36abcc45f7e3d273b7959bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4556ed63950df9e6b1c3c4273e8048b7"><td class="memItemLeft" align="right" valign="top"><a id="a4556ed63950df9e6b1c3c4273e8048b7" name="a4556ed63950df9e6b1c3c4273e8048b7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LARGEUR_CASE</b>&#160;&#160;&#160;700 / 20</td></tr>
+<tr class="separator:a4556ed63950df9e6b1c3c4273e8048b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ab5a05aef8d835e7085556a2ef01f8710"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="plateau_8c.html#ab5a05aef8d835e7085556a2ef01f8710">clean_ressources</a> (SDL_Window *w, SDL_Renderer *r, SDL_Texture *t)</td></tr>
+<tr class="memdesc:ab5a05aef8d835e7085556a2ef01f8710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruction des textures et rendus ainsi que de la fenêtre.  <a href="plateau_8c.html#ab5a05aef8d835e7085556a2ef01f8710">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab5a05aef8d835e7085556a2ef01f8710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae076ea94869af00726767a682209a4c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="plateau_8c.html#ae076ea94869af00726767a682209a4c0">SDL_AfficherUneImage</a> (SDL_Renderer *renderer, SDL_Surface *image, SDL_Texture *texture, SDL_Rect rectangle)</td></tr>
+<tr class="memdesc:ae076ea94869af00726767a682209a4c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet l'affichage d'une image et opère les cas d'erreurs éventuels.  <a href="plateau_8c.html#ae076ea94869af00726767a682209a4c0">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae076ea94869af00726767a682209a4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca281d85d9095b4bdcd73312ef440377"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="plateau_8c.html#aca281d85d9095b4bdcd73312ef440377">fonction_rand_biome</a> (int biome[N][N], int i, int j)</td></tr>
+<tr class="memdesc:aca281d85d9095b4bdcd73312ef440377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupère une case de coordonnée i / j et lui affecte une valeur aléatoire qui définira sa texture dans la création de plateau.  <a href="plateau_8c.html#aca281d85d9095b4bdcd73312ef440377">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aca281d85d9095b4bdcd73312ef440377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77d97ee32158cb8e63cf3d04e1db7513"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="plateau_8c.html#a77d97ee32158cb8e63cf3d04e1db7513">crea_plat</a> (SDL_Rect cases[LONGUEUR_CASE][LARGEUR_CASE])</td></tr>
+<tr class="memdesc:a77d97ee32158cb8e63cf3d04e1db7513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupère les cases définies auparavant et créé le plateau de jeu, d'abord par le bandeau d'information, puis la colonne de gauche et enfin le reste des cases à partir de la colonne.  <a href="plateau_8c.html#a77d97ee32158cb8e63cf3d04e1db7513">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a77d97ee32158cb8e63cf3d04e1db7513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11aae5361de91fb5e1744f73a07faa4e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="plateau_8c.html#a11aae5361de91fb5e1744f73a07faa4e">affectation_cases</a> (int biome[N][N], SDL_Rect cases[LONGUEUR_CASE][LARGEUR_CASE])</td></tr>
+<tr class="memdesc:a11aae5361de91fb5e1744f73a07faa4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inscrit dans un fichier de sauvegarde les cases du plateau pour permettre de continuer la partie.  <a href="plateau_8c.html#a11aae5361de91fb5e1744f73a07faa4e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a11aae5361de91fb5e1744f73a07faa4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0346544e736d5f47265147a334083fb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="plateau_8c.html#a0346544e736d5f47265147a334083fb4">afficher_plateau</a> (SDL_Window *window, SDL_Renderer *renderer, SDL_Rect cases[LONGUEUR_CASE][LARGEUR_CASE], int biome[N][N])</td></tr>
+<tr class="memdesc:a0346544e736d5f47265147a334083fb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">affichage du plateau  <a href="plateau_8c.html#a0346544e736d5f47265147a334083fb4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0346544e736d5f47265147a334083fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p >Création du plateau de jeu et affichage de celui ci. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Pierre Cyprien </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>01/02/2022 </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a11aae5361de91fb5e1744f73a07faa4e" name="a11aae5361de91fb5e1744f73a07faa4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11aae5361de91fb5e1744f73a07faa4e">&#9670;&nbsp;</a></span>affectation_cases()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int affectation_cases </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>biome</em>[N][N], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect&#160;</td>
+          <td class="paramname"><em>cases</em>[LONGUEUR_CASE][LARGEUR_CASE]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inscrit dans un fichier de sauvegarde les cases du plateau pour permettre de continuer la partie. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">biome</td><td>Fonction d'affectation d'un biome aléatoire </td></tr>
+    <tr><td class="paramname">cases[NB_CASE]</td><td>Tableau de taille NB_CASE d'objet de type SDL_Rect déjà initialisé </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0346544e736d5f47265147a334083fb4" name="a0346544e736d5f47265147a334083fb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0346544e736d5f47265147a334083fb4">&#9670;&nbsp;</a></span>afficher_plateau()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficher_plateau </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Window *&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect&#160;</td>
+          <td class="paramname"><em>cases</em>[LONGUEUR_CASE][LARGEUR_CASE], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>biome</em>[N][N]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>affichage du plateau </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>Pointeur sur un objet de type SDL_Window </td></tr>
+    <tr><td class="paramname">renderer</td><td>Pointeur sur un objet de type SDL_Renderer </td></tr>
+    <tr><td class="paramname">cases[NB_CASE]</td><td>Tableau de taille NB_CASE d'objet de type SDL_Rect déjà initialisé </td></tr>
+    <tr><td class="paramname">biome[NB_CASE]</td><td>Tableau de taille NB_CASE d'objet de type integer déjà initialisé </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab5a05aef8d835e7085556a2ef01f8710" name="ab5a05aef8d835e7085556a2ef01f8710"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5a05aef8d835e7085556a2ef01f8710">&#9670;&nbsp;</a></span>clean_ressources()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clean_ressources </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Window *&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Texture *&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destruction des textures et rendus ainsi que de la fenêtre. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">w</td><td>Récupère la fenêtre déjà initialisé </td></tr>
+    <tr><td class="paramname">r</td><td>Récupère la rendu déjà initialisé </td></tr>
+    <tr><td class="paramname">t</td><td>Récupère la texture déjà initialisé </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a77d97ee32158cb8e63cf3d04e1db7513" name="a77d97ee32158cb8e63cf3d04e1db7513"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77d97ee32158cb8e63cf3d04e1db7513">&#9670;&nbsp;</a></span>crea_plat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int crea_plat </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Rect&#160;</td>
+          <td class="paramname"><em>cases</em>[LONGUEUR_CASE][LARGEUR_CASE]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Récupère les cases définies auparavant et créé le plateau de jeu, d'abord par le bandeau d'information, puis la colonne de gauche et enfin le reste des cases à partir de la colonne. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cases[NB_CASE]</td><td>Tableau de taille NB_CASE d'objet de type SDL_Rect déjà initialisé </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aca281d85d9095b4bdcd73312ef440377" name="aca281d85d9095b4bdcd73312ef440377"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca281d85d9095b4bdcd73312ef440377">&#9670;&nbsp;</a></span>fonction_rand_biome()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fonction_rand_biome </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>biome</em>[N][N], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Récupère une case de coordonnée i / j et lui affecte une valeur aléatoire qui définira sa texture dans la création de plateau. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">biome[NB_CASE]</td><td>Tableau de taille NB_CASE d'objet de type SDL_Rect déjà initialisé </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae076ea94869af00726767a682209a4c0" name="ae076ea94869af00726767a682209a4c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae076ea94869af00726767a682209a4c0">&#9670;&nbsp;</a></span>SDL_AfficherUneImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SDL_AfficherUneImage </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Surface *&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Texture *&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect&#160;</td>
+          <td class="paramname"><em>rectangle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet l'affichage d'une image et opère les cas d'erreurs éventuels. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>Rendu d'affichage déjà initialisé </td></tr>
+    <tr><td class="paramname">image</td><td>Récupère l'image déjà initialisé </td></tr>
+    <tr><td class="paramname">texture</td><td>Récupère la texture déjà initialisé </td></tr>
+    <tr><td class="paramname">rectangle</td><td>objet de type SDL_Rect déjà initialisé </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

@@ -7,8 +7,40 @@
 #include "headers/menu.h"
 #include "headers/structure_jeu.h"
 
+/*
+ *fonction pour la civilization globale
+ *
+ */
 
+ civilization_t * crea_civ(int civi){
+     civilization_t * civ=malloc(sizeof(civilization_t));
+     civ->civilization=civi;
+     civ->sciences_globale=2;
+     civ->nb_ferme=0;
+     civ->nb_biblio=0;
+     if(civi==1){
+      civ->bonus_sciences=3;
+      civ->bonus_culture=1;
+    }
+    else if(civi==2){
+    civ->bonus_sciences=2;
+    civ->bonus_culture=2;
+  }
+    else if(civi==3){
+      civ->bonus_sciences=1;
+      civ->bonus_culture=3;
 
+    }
+
+     return(civ);
+ }
+
+civilization_t *fin_tour_civ(civilization_t *civ){
+
+civ->sciences_globale=(civ->sciences_globale)+(2*(civ->nb_biblio)*(civ->bonus_sciences));
+civ->culture_globale=(civ->culture_globale)+(3*(civ->nb_ferme)*(civ->bonus_culture));
+return(civ);
+}
 
 
 
@@ -19,8 +51,8 @@
   */
 
 
-int est_libre(int biome[i][j]){
-    if(biome[i][j]==1 || biome[i][j]==2)
+int est_libre(int liste_cases[i][j]){
+    if(liste_cases[i][j]==1 || liste_cases[i][j]==2)
         return(0);
     else
       return(1);
@@ -42,9 +74,8 @@ void affiche_colon(SDL_Rect plateau[LONGUEUR_CASE][LARGEUR_CASE],SDL_Renderer *r
       SDL_Surface *image_colon=NULL;
       int i=colon->x;
       int j=(colon->y)-1;
-      image_colon=IMG_Load("./image/guerrier.png");
+      image_colon=IMG_Load("./image/colon.png");
       SDL_AfficherUneImage(renderer,image_colon,texture,plateau[i][j]);
-
 }
 
 colon_t * crea_colon(int i,int j){
@@ -147,7 +178,7 @@ void affiche_batisseur(SDL_Rect plateau[LONGUEUR_CASE][LARGEUR_CASE],SDL_Rendere
       SDL_Surface *image_batisseur;
       int i=batisseur->x;
       int j=(batisseur->y)-1;
-      image_batisseur=IMG_Load("./image/nombre_tour.png");
+      image_batisseur=IMG_Load("./image/batisseur.png");
       SDL_AfficherUneImage(renderer,image_batisseur,texture,plateau[i][j]);
 
 }
@@ -158,10 +189,9 @@ batisseur_t * crea_batisseur(int i,int j){
     batisseur->x=i;
     batisseur->y=j;
     batisseur->nb_coup=3;
-    batisseur->pt_mouv=1;  //etat de non construction de ville;
-    //affiche_batisseur(plateau);
+
     printf("position batisseur :");
-  //  printf(" x=%d y=%d\n",batisseur->x,batisseur->y);
+
     return(batisseur);
 }
 
@@ -202,7 +232,7 @@ void affiche_guerrier(SDL_Rect plateau[LONGUEUR_CASE][LARGEUR_CASE],SDL_Renderer
       SDL_Surface *image_guerrier;
       int i=guerrier->x;
       int j=(guerrier->y)-1;
-      image_guerrier=IMG_Load("./image/nombre_tour.png");
+      image_guerrier=IMG_Load("./image/guerrier.png");
       SDL_AfficherUneImage(renderer,image_guerrier,texture,plateau[i][j]);
 
 }
@@ -317,7 +347,7 @@ void affiche_arm_long(SDL_Rect plateau[LONGUEUR_CASE][LARGEUR_CASE],SDL_Renderer
       SDL_Surface *image_arm_long;
       int i=arm_long->x;
       int j=(arm_long->y)-1;
-      image_arm_long=IMG_Load("./image/nombre_tour.png");
+      image_arm_long=IMG_Load("./image/archer.png");
       SDL_AfficherUneImage(renderer,image_arm_long,texture,plateau[i][j]);
 
 }

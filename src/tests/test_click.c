@@ -33,8 +33,7 @@ int main(int argc, char* argv[])
 {
     SDL_Window* window = NULL;
     SDL_Renderer* renderer = NULL;
-    SDL_Texture *texture=NULL;
-    SDL_Surface *image_restart=IMG_Load("image/restart.bmp");
+
     Uint32 affich_fenetre=0;
 
     int liste_cases[N][N];
@@ -50,11 +49,6 @@ int main(int argc, char* argv[])
     rectangle_quit.w = LARGEUR_CASE;
     rectangle_quit.h = LONGUEUR_CASE;
 
-    SDL_Rect rectangle_restart;
-    rectangle_restart.x = LONGUEUR_CASE;
-    rectangle_restart.y = 0;
-    rectangle_restart.w = LONGUEUR_CASE;
-    rectangle_restart.h = LARGEUR_CASE;
 
 
     int x = 0, y = 0,numx,numy;
@@ -78,9 +72,6 @@ int main(int argc, char* argv[])
         SDL_ExitWithError("Impossible de creer le rendu");
     }
 
-    SDL_AfficherUneImage(renderer,image_restart,texture,rectangle_restart);
-
-
     SDL_bool program_launched = SDL_TRUE;
 
     while (program_launched) {
@@ -100,37 +91,26 @@ int main(int argc, char* argv[])
                  printf("coord : x=%d, y=%d \n", x, y);
                  numx = click_case_x(x);
                  numy = click_case_y(y);
-                 printf("case : i=%d, j=%d \n\n", numx, numy);
+                 printf("case : i=%d, j=%d \n", numx, numy);
 
+                        if(SDL_Init(SDL_INIT_VIDEO) != 0)   /*   Lancement SDL   */
+                            SDL_ExitWithError("Initialisation SDL");
+                        /*     Création de la fenêtre     */
+                        crea_plat(cases);
+                        affectation_cases(liste_cases,cases);
 
-                 if (x > rectangle_quit.x && x<(rectangle_quit.x + rectangle_quit.h) && y>rectangle_quit.y && y < (rectangle_quit.y + rectangle_quit.w))
-                 {
-                     printf("programme quitté\n");
-                     program_launched = SDL_FALSE;
-                 }
-
-                if(SDL_Init(SDL_INIT_VIDEO) != 0)   /*   Lancement SDL   */
-                    SDL_ExitWithError("Initialisation SDL");
-                if (x > rectangle_restart.x && x<(rectangle_restart.x + rectangle_restart.h) && y>rectangle_restart.y && y < (rectangle_restart.y + rectangle_restart.w))
-                    {
-                      rectangle_restart.x = 0;
-                      rectangle_restart.y = 0;
-                      rectangle_restart.w =0;
-                      rectangle_restart.h =0;
-                      /*     Création de la fenêtre     */
-                      crea_plat(cases);
-                      affectation_cases(liste_cases,cases);
-
-                          /*       Création du rendu de plateau     */
-                      afficher_plateau(window,renderer,cases,liste_cases);
-                      SDL_RenderPresent(renderer);
-
-                    }
+                            /*       Création du rendu de plateau     */
+                        afficher_plateau(window,renderer,cases,liste_cases);
+                        SDL_RenderPresent(renderer);
 
 
 
 
-
+                if (x > rectangle_quit.x && x<(rectangle_quit.x + rectangle_quit.w) && y>rectangle_quit.y && y < (rectangle_quit.y + rectangle_quit.h))
+                {
+                    printf("programme quitté");
+                    program_launched = SDL_FALSE;
+                }
                 break;
 
             default:

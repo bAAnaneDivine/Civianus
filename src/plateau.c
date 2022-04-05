@@ -83,7 +83,7 @@ void SDL_AfficherUneImage(SDL_Renderer *renderer,SDL_Surface *image,SDL_Texture 
 
 int fonction_rand_biome (int biome[N][N],int i,int j){
 int biom;
-biom=rand()%10+1;
+biom=rand()%20+1;
 biome[i][j]=biom;
 return (biome[i][j]);
 }
@@ -116,7 +116,7 @@ int crea_plat(SDL_Rect cases[LONGUEUR_CASE][LARGEUR_CASE]){
       cases[0][j].x=cases[0][j-1].x;
       cases[0][j].y=cases[0][j-1].y+LARGEUR_CASE;
     }
-    //reste du plateau
+    /*reste du plateau*/
     for(i=1;i<=20;i++){
       for(j=0;j<=19;j++){
           cases[i][j].w=LONGUEUR_CASE;
@@ -207,22 +207,17 @@ SDL_AfficherUneImage(renderer,image,imagefond,fond);
 
 
   /*Création de l'image du bandeau informations*/
-  /*
 SDL_Rect bandeau_info={0,0,Fenetre_height,LARGEUR_CASE};
 image= IMG_Load("./image/fond_plateau1.png");
 SDL_AfficherUneImage(renderer,image,texture,bandeau_info);
-*/
+
 
 
 
   /* bouton quitter sur le plateau */
 SDL_Rect quit={0,0,LONGUEUR_CASE,LARGEUR_CASE};
-image= IMG_Load("./image/quit.bmp");
+image= IMG_Load("./image/quit.png");
 SDL_AfficherUneImage(renderer,image,texture,quit);
-
-SDL_Rect passer_tour={LONGUEUR_CASE,0,LONGUEUR_CASE,LARGEUR_CASE};
-image= IMG_Load("./image/guerrier.png");
-SDL_AfficherUneImage(renderer,image,texture,passer_tour);
 
 
 
@@ -234,22 +229,27 @@ int adresse=0;
         case 1:
           image= IMG_Load("./image/montagne.png");
           SDL_AfficherUneImage(renderer,image,texture,cases[i][j]);
-
         break;
         case 2:
         image= IMG_Load("./image/eau.png");
           SDL_AfficherUneImage(renderer,image,texture,cases[i][j]);
-
         break;
         default:
           image= IMG_Load("./image/herbe.png");
           SDL_AfficherUneImage(renderer,image,texture,cases[i][j]);
-
         break;
       }
+      
+
       adresse++;
     }
   }
+
+  image= IMG_Load("./image/ville1.png"); /* base alliée */
+  SDL_AfficherUneImage(renderer,image,texture,cases[3][7]);
+  image= IMG_Load("./image/ville1.png"); /* base alliée */
+  SDL_AfficherUneImage(renderer,image,texture,cases[17][8]);
+
 
   clean_ressources(NULL,NULL,texture);
   clean_ressources(NULL,NULL,imagefond);

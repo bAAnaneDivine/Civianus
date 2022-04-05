@@ -16,20 +16,18 @@
 */
 
 
-/// Création de la SDL :
-///
-/// Initialisation de la SDL.
+/* Création de la SDL
+Initialisation de la SDL.*/
 
 
-//Lancement SDL
+/*Lancement SDL*/
 void SDL_initialisation() {
     if (SDL_Init(SDL_INIT_VIDEO) != 0)
         SDL_ExitWithError("Initialisation SDL");
 }
 
-/// Message d'erreur:
-///
-/// Conceptualisation d'une circonstance d'erreur.
+/*Message d'erreur:
+Conceptualisation d'une circonstance d'erreur.*/
 
 void SDL_ExitWithError(const char* message)
 {

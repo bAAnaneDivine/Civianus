@@ -1,0 +1,128 @@
+\hypertarget{structure__jeu_8h_source}{}\doxysection{structure\+\_\+jeu.\+h}
+\label{structure__jeu_8h_source}\index{src/headers/structure\_jeu.h@{src/headers/structure\_jeu.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_COLON\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_COLON\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keywordtype}{int} i,j;}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{comment}{/* srtucture batisseur */}}
+\DoxyCodeLine{8 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structbatisseur__t}{batisseur\_t}}\{}
+\DoxyCodeLine{9   \textcolor{keywordtype}{int} x;}
+\DoxyCodeLine{10   \textcolor{keywordtype}{int} y;}
+\DoxyCodeLine{11   \textcolor{keywordtype}{int} nb\_coup;}
+\DoxyCodeLine{12   \textcolor{keywordtype}{int} pt\_mouv;}
+\DoxyCodeLine{13 \}\mbox{\hyperlink{structbatisseur__t}{batisseur\_t}};}
+\DoxyCodeLine{14 \textcolor{comment}{/* structure colon */}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structcolon__t}{colon\_t}}\{}
+\DoxyCodeLine{17   \textcolor{keywordtype}{int} x;}
+\DoxyCodeLine{18   \textcolor{keywordtype}{int} y;}
+\DoxyCodeLine{19   \textcolor{keywordtype}{int} etat\_cons;}
+\DoxyCodeLine{20 \}\mbox{\hyperlink{structcolon__t}{colon\_t}};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{comment}{/* srtucture ville avec avantage */}}
+\DoxyCodeLine{23 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structville}{ville}}\{}
+\DoxyCodeLine{24   \textcolor{keywordtype}{int} x;}
+\DoxyCodeLine{25   \textcolor{keywordtype}{int} y;}
+\DoxyCodeLine{26   \textcolor{keywordtype}{int} culture;}
+\DoxyCodeLine{27   \textcolor{keywordtype}{int} sciences;}
+\DoxyCodeLine{28   \textcolor{keywordtype}{int} niveau\_ville;}
+\DoxyCodeLine{29   \textcolor{keywordtype}{char}*  nom\_ville;}
+\DoxyCodeLine{30 \}\mbox{\hyperlink{structville}{ville\_t}};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{comment}{/* structure guerrier classique */}}
+\DoxyCodeLine{33 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structguerrier}{guerrier}}\{}
+\DoxyCodeLine{34   \textcolor{keywordtype}{int} x;}
+\DoxyCodeLine{35   \textcolor{keywordtype}{int} y;}
+\DoxyCodeLine{36   \textcolor{keywordtype}{int} pdv;}
+\DoxyCodeLine{37   \textcolor{keywordtype}{int} att;}
+\DoxyCodeLine{38   \textcolor{keywordtype}{int} def;}
+\DoxyCodeLine{39 \}\mbox{\hyperlink{structguerrier}{guerrier\_t}};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{comment}{/* structure armée longue distance*/}}
+\DoxyCodeLine{42 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structarm__long}{arm\_long}}\{}
+\DoxyCodeLine{43   \textcolor{keywordtype}{int} x;}
+\DoxyCodeLine{44   \textcolor{keywordtype}{int} y;}
+\DoxyCodeLine{45   \textcolor{keywordtype}{int} pdv;}
+\DoxyCodeLine{46   \textcolor{keywordtype}{int} att;}
+\DoxyCodeLine{47   \textcolor{keywordtype}{int} def;}
+\DoxyCodeLine{48 \}\mbox{\hyperlink{structarm__long}{arm\_long\_t}};}
+\DoxyCodeLine{49 \textcolor{comment}{/* structure armée specifique */}}
+\DoxyCodeLine{50 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structarm__spec}{arm\_spec}}\{}
+\DoxyCodeLine{51   \textcolor{keywordtype}{int} x;}
+\DoxyCodeLine{52   \textcolor{keywordtype}{int} y;}
+\DoxyCodeLine{53   \textcolor{keywordtype}{int} pdv;}
+\DoxyCodeLine{54   \textcolor{keywordtype}{int} att;}
+\DoxyCodeLine{55   \textcolor{keywordtype}{int} def;}
+\DoxyCodeLine{56 \}\mbox{\hyperlink{structarm__spec}{arm\_spec\_t}};}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{comment}{/*}}
+\DoxyCodeLine{59 \textcolor{comment}{ *fonction pour le colon}}
+\DoxyCodeLine{60 \textcolor{comment}{ *}}
+\DoxyCodeLine{61 \textcolor{comment}{ */}}
+\DoxyCodeLine{62 \textcolor{keywordtype}{int} est\_libre(\textcolor{keywordtype}{int} biome[i][j]);}
+\DoxyCodeLine{63 \textcolor{keywordtype}{void} supp\_image\_colon(SDL\_Rect plateau[i][j],SDL\_Renderer *renderer,SDL\_Texture * texture);}
+\DoxyCodeLine{64 \mbox{\hyperlink{structcolon__t}{colon\_t}} * crea\_colon(SDL\_Rect plateau[N][N],\textcolor{keywordtype}{int} i,\textcolor{keywordtype}{int} j);}
+\DoxyCodeLine{65 \textcolor{keywordtype}{void} mvt\_colon(SDL\_Rect plateau[i][j],\mbox{\hyperlink{structcolon__t}{colon\_t}} * colon,\textcolor{keywordtype}{int} x,\textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 \textcolor{comment}{/*}}
+\DoxyCodeLine{69 \textcolor{comment}{  *}}
+\DoxyCodeLine{70 \textcolor{comment}{  * fonction pour la ville}}
+\DoxyCodeLine{71 \textcolor{comment}{  *}}
+\DoxyCodeLine{72 \textcolor{comment}{*/}}
+\DoxyCodeLine{73 \textcolor{keywordtype}{void} affiche\_ville(SDL\_Rect plateau[i][j],\mbox{\hyperlink{structville}{ville\_t}} *\mbox{\hyperlink{structville}{ville}});}
+\DoxyCodeLine{74 \mbox{\hyperlink{structville}{ville\_t}} * crea\_ville(SDL\_Rect plateau[N][N],\textcolor{keywordtype}{int} i,\textcolor{keywordtype}{int} j);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 \textcolor{comment}{/*}}
+\DoxyCodeLine{77 \textcolor{comment}{  *}}
+\DoxyCodeLine{78 \textcolor{comment}{  * fonction pour le batisseur}}
+\DoxyCodeLine{79 \textcolor{comment}{  *}}
+\DoxyCodeLine{80 \textcolor{comment}{*/}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 \textcolor{keywordtype}{void} supp\_image\_colon(SDL\_Rect plateau[i][j],SDL\_Renderer *renderer,SDL\_Texture * texture);}
+\DoxyCodeLine{83 \mbox{\hyperlink{structcolon__t}{colon\_t}} * crea\_colon(SDL\_Rect plateau[N][N],\textcolor{keywordtype}{int} i,\textcolor{keywordtype}{int} j);}
+\DoxyCodeLine{84 \textcolor{keywordtype}{void} mvt\_colon(SDL\_Rect plateau[i][j],\mbox{\hyperlink{structcolon__t}{colon\_t}} * colon,\textcolor{keywordtype}{int} x,\textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \textcolor{comment}{/*}}
+\DoxyCodeLine{87 \textcolor{comment}{  *}}
+\DoxyCodeLine{88 \textcolor{comment}{  * fonction pour le guerrier}}
+\DoxyCodeLine{89 \textcolor{comment}{  *}}
+\DoxyCodeLine{90 \textcolor{comment}{*/}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{keywordtype}{void} supp\_image\_guerrier(SDL\_Rect plateau[i][j],SDL\_Renderer *renderer,SDL\_Texture * texture);}
+\DoxyCodeLine{93 \textcolor{keywordtype}{void} affiche\_guerrier(SDL\_Rect plateau[i][j]);}
+\DoxyCodeLine{94 \mbox{\hyperlink{structguerrier}{guerrier\_t}} * crea\_guerrier(SDL\_Rect plateau[N][N],\textcolor{keywordtype}{int} i,\textcolor{keywordtype}{int} j);}
+\DoxyCodeLine{95 \textcolor{keywordtype}{void} mvt\_guerrier(SDL\_Rect plateau[i][j],\mbox{\hyperlink{structguerrier}{guerrier\_t}} * \mbox{\hyperlink{structguerrier}{guerrier}},\textcolor{keywordtype}{int} x,\textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 \textcolor{comment}{/*}}
+\DoxyCodeLine{98 \textcolor{comment}{  *}}
+\DoxyCodeLine{99 \textcolor{comment}{  * fonction pour le arm\_long}}
+\DoxyCodeLine{100 \textcolor{comment}{  *}}
+\DoxyCodeLine{101 \textcolor{comment}{*/}}
+\DoxyCodeLine{102 \textcolor{keywordtype}{void} supp\_image\_arm\_long(SDL\_Rect plateau[i][j],SDL\_Renderer *renderer,SDL\_Texture * texture);}
+\DoxyCodeLine{103 \textcolor{keywordtype}{void} affiche\_arm\_long(SDL\_Rect plateau[i][j]);}
+\DoxyCodeLine{104 \mbox{\hyperlink{structarm__long}{arm\_long\_t}} * crea\_arm\_long(SDL\_Rect plateau[N][N],\textcolor{keywordtype}{int} i,\textcolor{keywordtype}{int} j);}
+\DoxyCodeLine{105 \textcolor{keywordtype}{void} mvt\_arm\_long(SDL\_Rect plateau[i][j],\mbox{\hyperlink{structarm__long}{arm\_long\_t}} * \mbox{\hyperlink{structarm__long}{arm\_long}},\textcolor{keywordtype}{int} x,\textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{comment}{/*}}
+\DoxyCodeLine{108 \textcolor{comment}{  *}}
+\DoxyCodeLine{109 \textcolor{comment}{  * fonction pour le arm\_spec}}
+\DoxyCodeLine{110 \textcolor{comment}{  *}}
+\DoxyCodeLine{111 \textcolor{comment}{*/}}
+\DoxyCodeLine{112 \textcolor{keywordtype}{void} supp\_image\_arm\_spec(SDL\_Rect plateau[i][j],SDL\_Renderer *renderer,SDL\_Texture * texture);}
+\DoxyCodeLine{113 \textcolor{keywordtype}{void} affiche\_arm\_spec(SDL\_Rect plateau[i][j]);}
+\DoxyCodeLine{114 \mbox{\hyperlink{structarm__spec}{arm\_spec\_t}} * crea\_arm\_spec(SDL\_Rect plateau[N][N],\textcolor{keywordtype}{int} i,\textcolor{keywordtype}{int} j);}
+\DoxyCodeLine{115 \textcolor{keywordtype}{void} mvt\_arm\_spec(SDL\_Rect plateau[i][j],\mbox{\hyperlink{structarm__spec}{arm\_spec\_t}} * \mbox{\hyperlink{structarm__spec}{arm\_spec}},\textcolor{keywordtype}{int} x,\textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119 \textcolor{keywordtype}{int} click\_case\_x(\textcolor{keywordtype}{int} x);}
+\DoxyCodeLine{120 \textcolor{keywordtype}{int} click\_case\_y(\textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
