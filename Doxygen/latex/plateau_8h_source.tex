@@ -1,0 +1,26 @@
+\hypertarget{plateau_8h_source}{}\doxysection{plateau.\+h}
+\label{plateau_8h_source}\index{src/headers/plateau.h@{src/headers/plateau.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_PLATEAU\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_MENU\_PLATEAU\_H\_\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define N 54}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define Fenetre\_width 1080}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define Fenetre\_height 1920}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define LONGUEUR\_CASE 1920 / 20}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define LARGEUR\_CASE 1080 / 20}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keywordtype}{void} \mbox{\hyperlink{plateau_8c_ab5a05aef8d835e7085556a2ef01f8710}{clean\_ressources}}(SDL\_Window *w,SDL\_Renderer *r,SDL\_Texture *t);}
+\DoxyCodeLine{12 \textcolor{keywordtype}{void} \mbox{\hyperlink{plateau_8c_ae076ea94869af00726767a682209a4c0}{SDL\_AfficherUneImage}}(SDL\_Renderer *renderer,SDL\_Surface *image,SDL\_Texture *texture,SDL\_Rect rectangle);}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keywordtype}{int} \mbox{\hyperlink{plateau_8c_a77d97ee32158cb8e63cf3d04e1db7513}{crea\_plat}}(SDL\_Rect cases[LONGUEUR\_CASE][LARGEUR\_CASE]);}
+\DoxyCodeLine{16 \textcolor{keywordtype}{int} \mbox{\hyperlink{plateau_8c_a11aae5361de91fb5e1744f73a07faa4e}{affectation\_cases}}(\textcolor{keywordtype}{int} liste\_biome[N][N],SDL\_Rect cases[LONGUEUR\_CASE][LARGEUR\_CASE]);}
+\DoxyCodeLine{17 \textcolor{keywordtype}{int} \mbox{\hyperlink{plateau_8c_aca281d85d9095b4bdcd73312ef440377}{fonction\_rand\_biome}} (\textcolor{keywordtype}{int} biome[N][N],\textcolor{keywordtype}{int} i,\textcolor{keywordtype}{int} j);}
+\DoxyCodeLine{18 \textcolor{keywordtype}{void} \mbox{\hyperlink{plateau_8c_a0346544e736d5f47265147a334083fb4}{afficher\_plateau}}(SDL\_Window *window,SDL\_Renderer * renderer,SDL\_Rect cases[LONGUEUR\_CASE][LARGEUR\_CASE],\textcolor{keywordtype}{int} biome[N][N]);}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

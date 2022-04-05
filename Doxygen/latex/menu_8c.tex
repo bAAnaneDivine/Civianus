@@ -1,0 +1,85 @@
+\hypertarget{menu_8c}{}\doxysection{Référence du fichier src/menu.c}
+\label{menu_8c}\index{src/menu.c@{src/menu.c}}
+
+
+Création du menu de jeu.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$SDL.\+h$>$}\newline
+{\ttfamily \#include $<$SDL\+\_\+image.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}./headers/admin\+\_\+\+SDL.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./headers/menu.\+h\char`\"{}}\newline
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{menu_8c_a316b99eaf38f80d0a970e17cc1baee5f}{menu}} (SDL\+\_\+\+Window $\ast$window, SDL\+\_\+\+Renderer $\ast$renderer, SDL\+\_\+\+Rect rectangle\+\_\+restart, SDL\+\_\+\+Rect rectangle\+\_\+continuer, SDL\+\_\+\+Rect rectangle\+\_\+quit, SDL\+\_\+\+Rect fenetre\+\_\+surface)
+\begin{DoxyCompactList}\small\item\em Elaboration de trois rectangles dans lesquels ont été insérés les images des boutons \char`\"{}restart\char`\"{}, \char`\"{}continuer\char`\"{} et \char`\"{}quit\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a7f46986bd0ab9e21df4227a980eac165}{menu\+\_\+select}} (SDL\+\_\+\+Window $\ast$window, SDL\+\_\+\+Renderer $\ast$renderer, SDL\+\_\+\+Rect rect\+\_\+trajan, SDL\+\_\+\+Rect rect\+\_\+pierre, SDL\+\_\+\+Rect rect\+\_\+\+Barberousse)
+\begin{DoxyCompactList}\small\item\em Le joueur choisis une civilization parmis les trois proposés. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Création du menu de jeu. 
+
+\begin{DoxyAuthor}{Auteur}
+Pierre Maël 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+01/02/2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{menu_8c_a316b99eaf38f80d0a970e17cc1baee5f}\label{menu_8c_a316b99eaf38f80d0a970e17cc1baee5f}} 
+\index{menu.c@{menu.c}!menu@{menu}}
+\index{menu@{menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily void menu (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Window $\ast$}]{window,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{SDL\+\_\+\+Rect}]{rectangle\+\_\+restart,  }\item[{SDL\+\_\+\+Rect}]{rectangle\+\_\+continuer,  }\item[{SDL\+\_\+\+Rect}]{rectangle\+\_\+quit,  }\item[{SDL\+\_\+\+Rect}]{fenetre\+\_\+surface }\end{DoxyParamCaption})}
+
+
+
+Elaboration de trois rectangles dans lesquels ont été insérés les images des boutons \char`\"{}restart\char`\"{}, \char`\"{}continuer\char`\"{} et \char`\"{}quit\char`\"{}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em window} & Pointeur sur un objet de type SDL\+\_\+\+Window \\
+\hline
+{\em renderer} & Pointeur sur un objet de type SDL\+\_\+\+Renderer \\
+\hline
+{\em rectangle\+\_\+restart} & Rectangle objet de type SDL\+\_\+\+Rect déjà initialisé \\
+\hline
+{\em rectangle\+\_\+continuer} & Rectangle objet de type SDL\+\_\+\+Rect déjà initialisé \\
+\hline
+{\em rectangle\+\_\+quit} & Rectangle objet de type SDL\+\_\+\+Rect déjà initialisé \\
+\hline
+{\em fenetre\+\_\+surface} & Récupération d\textquotesingle{}une surface déjà initialisée \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{menu_8c_a7f46986bd0ab9e21df4227a980eac165}\label{menu_8c_a7f46986bd0ab9e21df4227a980eac165}} 
+\index{menu.c@{menu.c}!menu\_select@{menu\_select}}
+\index{menu\_select@{menu\_select}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_select()}{menu\_select()}}
+{\footnotesize\ttfamily void menu\+\_\+select (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Window $\ast$}]{window,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{SDL\+\_\+\+Rect}]{rect\+\_\+trajan,  }\item[{SDL\+\_\+\+Rect}]{rect\+\_\+pierre,  }\item[{SDL\+\_\+\+Rect}]{rect\+\_\+\+Barberousse }\end{DoxyParamCaption})}
+
+
+
+Le joueur choisis une civilization parmis les trois proposés. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em window} & Pointeur sur un objet de type SDL\+\_\+\+Window \\
+\hline
+{\em renderer} & Pointeur sur un objet de type SDL\+\_\+\+Renderer \\
+\hline
+{\em rect\+\_\+trajan} & Rectangle objet de type SDL\+\_\+\+Rect déjà initialisé pour le choix de la civilization de trajan \\
+\hline
+{\em rect\+\_\+pierre} & Rectangle objet de type SDL\+\_\+\+Rect déjà initialisé pour le choix de la civilization de pierre Ier \\
+\hline
+{\em rect\+\_\+\+Barberousse} & Rectangle objet de type SDL\+\_\+\+Rect déjà initialisé pour le choix de la civilization de barberousse \\
+\hline
+\end{DoxyParams}

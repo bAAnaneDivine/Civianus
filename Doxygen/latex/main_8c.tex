@@ -1,0 +1,65 @@
+\hypertarget{main_8c}{}\doxysection{Référence du fichier src/main.c}
+\label{main_8c}\index{src/main.c@{src/main.c}}
+
+
+Programme principal.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$SDL.\+h$>$}\newline
+{\ttfamily \#include $<$SDL\+\_\+image.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}headers/admin\+\_\+\+SDL.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}headers/menu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}headers/plateau.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a0240ac851181b84ac374872dc5434ee4}\label{main_8c_a0240ac851181b84ac374872dc5434ee4}} 
+\#define {\bfseries N}~54
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Initialisation des variables telles que la hauteur et la largeur, nécessaires à la taille de la fenêtre. Ensuite initialisation de chaque rectangle que ce soit pour les boutons, le personnage et le rendu. ~\newline
+ Création d\textquotesingle{}une fenêtre et d\textquotesingle{}un rendu. ~\newline
+ Appel des fonctions des autres fichiers. ~\newline
+ Condition pour garder la fenêtre ouverte, attente des événements résultants du joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Programme principal. 
+
+\begin{DoxyAuthor}{Auteur}
+Pierre Maël Cyprien 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+01/02/2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Initialisation des variables telles que la hauteur et la largeur, nécessaires à la taille de la fenêtre. Ensuite initialisation de chaque rectangle que ce soit pour les boutons, le personnage et le rendu. ~\newline
+ Création d\textquotesingle{}une fenêtre et d\textquotesingle{}un rendu. ~\newline
+ Appel des fonctions des autres fichiers. ~\newline
+ Condition pour garder la fenêtre ouverte, attente des événements résultants du joueur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em argc} & Récupère le nombre d\textquotesingle{}arguments \\
+\hline
+{\em argv} & Met les arguments dans un tableau accessible \\
+\hline
+\end{DoxyParams}

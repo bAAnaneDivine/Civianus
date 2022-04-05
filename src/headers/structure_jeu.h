@@ -1,0 +1,122 @@
+#ifndef _COLON_H_
+#define _COLON_H_
+
+int i,j;
+
+
+/* srtucture batisseur */
+typedef struct batisseur_t{
+  int x;
+  int y;
+  int nb_coup;
+  int pt_mouv;
+}batisseur_t;
+/* structure colon */
+
+typedef struct colon_t{
+  int x;
+  int y;
+  int etat_cons;
+}colon_t;
+
+/* srtucture ville avec avantage */
+typedef struct ville{
+  int x;
+  int y;
+  int culture;
+  int sciences;
+  int niveau_ville;
+  char*  nom_ville;
+}ville_t;
+
+/* structure guerrier classique */
+typedef struct guerrier{
+  int x;
+  int y;
+  int pdv;
+  int att;
+  int def;
+}guerrier_t;
+
+/* structure armée longue distance*/
+typedef struct arm_long{
+  int x;
+  int y;
+  int pdv;
+  int att;
+  int def;
+}arm_long_t;
+/* structure armée specifique */
+typedef struct arm_spec{
+  int x;
+  int y;
+  int pdv;
+  int att;
+  int def;
+}arm_spec_t;
+
+/*
+ *fonction pour le colon
+ *
+ */
+int est_libre(int biome[i][j]);
+void supp_image_colon(SDL_Rect plateau[i][j],SDL_Renderer *renderer,SDL_Texture * texture);
+colon_t * crea_colon(SDL_Rect plateau[N][N],int i,int j);
+void mvt_colon(SDL_Rect plateau[i][j],colon_t * colon,int x,int y);
+
+
+/*
+  *
+  * fonction pour la ville
+  *
+*/
+void affiche_ville(SDL_Rect plateau[i][j],ville_t *ville);
+ville_t * crea_ville(SDL_Rect plateau[N][N],int i,int j);
+
+/*
+  *
+  * fonction pour le batisseur
+  *
+*/
+
+void supp_image_colon(SDL_Rect plateau[i][j],SDL_Renderer *renderer,SDL_Texture * texture);
+colon_t * crea_colon(SDL_Rect plateau[N][N],int i,int j);
+void mvt_colon(SDL_Rect plateau[i][j],colon_t * colon,int x,int y);
+
+/*
+  *
+  * fonction pour le guerrier
+  *
+*/
+
+void supp_image_guerrier(SDL_Rect plateau[i][j],SDL_Renderer *renderer,SDL_Texture * texture);
+void affiche_guerrier(SDL_Rect plateau[i][j]);
+guerrier_t * crea_guerrier(SDL_Rect plateau[N][N],int i,int j);
+void mvt_guerrier(SDL_Rect plateau[i][j],guerrier_t * guerrier,int x,int y);
+
+/*
+  *
+  * fonction pour le arm_long
+  *
+*/
+void supp_image_arm_long(SDL_Rect plateau[i][j],SDL_Renderer *renderer,SDL_Texture * texture);
+void affiche_arm_long(SDL_Rect plateau[i][j]);
+arm_long_t * crea_arm_long(SDL_Rect plateau[N][N],int i,int j);
+void mvt_arm_long(SDL_Rect plateau[i][j],arm_long_t * arm_long,int x,int y);
+
+/*
+  *
+  * fonction pour le arm_spec
+  *
+*/
+void supp_image_arm_spec(SDL_Rect plateau[i][j],SDL_Renderer *renderer,SDL_Texture * texture);
+void affiche_arm_spec(SDL_Rect plateau[i][j]);
+arm_spec_t * crea_arm_spec(SDL_Rect plateau[N][N],int i,int j);
+void mvt_arm_spec(SDL_Rect plateau[i][j],arm_spec_t * arm_spec,int x,int y);
+
+
+
+int click_case_x(int x);
+int click_case_y(int y);
+
+#endif
